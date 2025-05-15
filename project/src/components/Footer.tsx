@@ -19,7 +19,12 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="https://www.instagram.com/adaaya_07/?igsh=Y3djdzN5dmVyc2l5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
@@ -27,7 +32,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Shop Column */}
           <div>
             <h3 className="text-lg font-medium mb-6 text-white">Shop</h3>
@@ -41,7 +46,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Info Column */}
           <div>
             <h3 className="text-lg font-medium mb-6 text-white">Information</h3>
@@ -55,7 +60,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+
           {/* Contact Column */}
           <div>
             <h3 className="text-lg font-medium mb-6 text-white">Contact Us</h3>
@@ -73,7 +78,7 @@ const Footer = () => {
                 <span className="text-gray-400">hello@stellaz.com</span>
               </li>
             </ul>
-            
+
             {/* Opening Hours */}
             <div className="mt-6">
               <h4 className="text-sm font-medium mb-3 text-white">Customer Service Hours</h4>
@@ -85,13 +90,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
             © 2025 Adaaya. All rights reserved.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#" className="text-gray-500 hover:text-pink-400 text-sm transition-colors">
               Privacy Policy

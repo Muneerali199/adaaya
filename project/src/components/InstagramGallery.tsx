@@ -50,7 +50,7 @@ const InstagramGallery = () => {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800">Follow Our Instagram</h2>
           </div>
           <p className="mt-2 text-gray-600 max-w-xl mx-auto">
-            Get inspired by our community and share your style with #STELLAZ
+            Get inspired by our community and share your style with #Adaaya
           </p>
         </div>
         
@@ -90,7 +90,9 @@ const InstagramGallery = () => {
         
         <div className="text-center mt-10">
           <a 
-            href="#" 
+            href="https://www.instagram.com/adaaya_07/?igsh=Y3djdzN5dmVyc2l5" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             className="inline-flex items-center text-pink-500 hover:text-pink-600 font-medium"
           >
             <Instagram size={18} className="mr-2" />
