@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Filter, ChevronDown } from 'lucide-react';
 
@@ -7,34 +7,38 @@ const sizes = ['All Sizes', '2-3Y', '4-5Y', '6-7Y', '8-9Y', '10-11Y'];
 const colors = ['All Colors', 'Pink', 'Purple', 'Blue', 'White', 'Yellow'];
 const sortOptions = ['Newest', 'Price: Low to High', 'Price: High to Low', 'Popular'];
 
+// Conversion rate: 1 USD = 83 INR (adjust as needed)
+const USD_TO_INR = 83;
+
 const products = [
   {
     id: 1,
     name: 'Butterfly Dream Dress',
     price: 49.99,
-    image: 'https://images.pexels.com/photos/5905933/pexels-photo-5905933.jpeg',
-    category: 'Dresses'
+    image: 'src/assets/product1.jpg',
+    category: 'Dresses',
   },
   {
     id: 2,
     name: 'Rainbow Tulle Skirt',
     price: 34.99,
     image: 'https://images.pexels.com/photos/5693889/pexels-photo-5693889.jpeg',
-    category: 'Bottoms'
+    category: 'Bottoms',
   },
   {
     id: 3,
     name: 'Sparkle Party Top',
     price: 29.99,
     image: 'https://images.pexels.com/photos/6347885/pexels-photo-6347885.jpeg',
-    category: 'Tops'
+    category: 'Tops',
   },
-  // Add more products as needed
 ];
 
 const Collection = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+  // Function to convert USD to INR
+  const convertToINR = (usd: number) => (usd * USD_TO_INR).toFixed(2);
 
   return (
     <div className="min-h-screen pt-20">
@@ -54,7 +58,7 @@ const Collection = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filter Sidebar */}
-          <motion.div 
+          <motion.div
             className="lg:w-64 flex-shrink-0"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -125,9 +129,9 @@ const Collection = () => {
               <p className="text-gray-600">
                 Showing <span className="font-medium text-gray-800">24</span> products
               </p>
-              
+
               <div className="relative">
-                <select 
+                <select
                   className="appearance-none bg-white border border-gray-200 rounded-lg px-4 py-2 pr-8 text-gray-600 focus:outline-none focus:border-pink-500"
                 >
                   {sortOptions.map((option) => (
@@ -139,7 +143,7 @@ const Collection = () => {
             </div>
 
             {/* Products */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -154,15 +158,15 @@ const Collection = () => {
                 >
                   <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <div className="aspect-[3/4] overflow-hidden">
-                      <img 
-                        src={product.image} 
+                      <img
+                        src={product.image}
                         alt={product.name}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
                     <div className="p-6">
                       <h3 className="font-medium text-gray-800 mb-2">{product.name}</h3>
-                      <p className="text-pink-500 font-medium">${product.price}</p>
+                      <p className="text-pink-500 font-medium">₹{convertToINR(product.price)}</p>
                       <button className="mt-4 w-full py-2 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-600 transition-colors">
                         Add to Cart
                       </button>
