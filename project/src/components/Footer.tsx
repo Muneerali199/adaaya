@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div>
-            <h2 className="text-3xl font-serif font-bold mb-6 text-pink-400">STELLAZ</h2>
+            <h2 className="text-3xl font-serif font-bold mb-6 text-pink-400">Adaaya</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Creating magical fashion moments for every young girl. Our designs inspire confidence, joy, and self-expression.
             </p>
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-pink-400 flex-shrink-0" />
-                <span className="text-gray-400">(123) 456-7890</span>
+                <span className="text-gray-400">+91-9634933365</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-pink-400 flex-shrink-0" />
@@ -89,7 +89,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2025 STELLAZ. All rights reserved.
+            © 2025 Adaaya. All rights reserved.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
