@@ -4,19 +4,19 @@ const categories = [
   {
     id: 1,
     name: 'Dresses',
-    image: 'https://images.pexels.com/photos/3771839/pexels-photo-3771839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    image: 'https://images.pexels.com/photos/2235071/pexels-photo-2235071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     description: 'Elegant styles for every occasion'
   },
   {
     id: 2,
     name: 'Tops',
-    image: 'https://images.pexels.com/photos/7148384/pexels-photo-7148384.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    image: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     description: 'Fresh styles to brighten your look'
   },
   {
     id: 3,
     name: 'Accessories',
-    image: 'https://images.pexels.com/photos/7148397/pexels-photo-7148397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    image: 'https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     description: 'Complete your outfit with our accessories'
   }
 ];
@@ -43,11 +43,14 @@ const CategorySection = () => {
                 <img 
                   src={category.image} 
                   alt={category.name} 
+                  onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                    e.currentTarget.src = `https://via.placeholder.com/1260x750?text=${category.name}`;
+                  }}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/80 opacity-80 group-hover:opacity-90 transition-opacity"></div>
               
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <h3 className="text-white text-2xl font-serif font-bold mb-2">{category.name}</h3>
